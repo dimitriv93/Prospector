@@ -29,6 +29,10 @@ public class Card : MonoBehaviour {
 	void Start() {
 		SetSortOrder(0); // Ensures that the card starts properly depth sorted
 	}
+	// Virtual methods can be overridden by subclass methods with the same name
+	virtual public void OnMouseUpAsButton() {
+		print (name); // When clicked, this outputs the card name
+	}
 
 	// If spriteRenderers is not yet defined, this function defines it
 	public void PopulateSpriteRenderers() {
