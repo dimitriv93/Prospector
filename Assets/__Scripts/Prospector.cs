@@ -16,6 +16,7 @@ public class Prospector : MonoBehaviour {
 	static public Prospector 	S;
 	static public int SCORE_FROM_PREV_ROUND = 0;
 	static public int HIGH_SCORE = 0;
+	public float reloadDelay = 1f; // The delay between rounds
 	public Vector3              fsPosMid  = new Vector3(0.5f, 0.90f, 0);
 	public Vector3              fsPosRun  = new Vector3(0.5f, 0.75f, 0);
 	public Vector3              fsPosMid2 = new Vector3(0.5f, 0.5f,  0);
@@ -286,6 +287,12 @@ public class Prospector : MonoBehaviour {
 		} else {
 			ScoreManager(ScoreEvent.gameLoss); // This replaces the old line
 		}
+		// Reload the scene in reloadDelay seconds
+		// This will give the score a moment to travel
+		Invoke ("ReloadLevel", reloadDelay); //1
+		// Application.LoadLevel("__Prospector_Scene_0"); // Now commented out
+	}
+	void ReloadLevel() {
 		// Reload the scene, resetting the game
 		Application.LoadLevel("__Prospector_Scene_0");
 	}
