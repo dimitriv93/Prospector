@@ -6,7 +6,7 @@ public class Scoreboard : MonoBehaviour {
 	public static Scoreboard S; // The singleton for Scoreboard
 	public GameObject    prefabFloatingScore;
 	public bool ________________;
-	[Serialize Field]
+	[SerializeField]
 	private int          _score = 0;
 	public string        _scoreString;
 	// The score property also sets the scoreString

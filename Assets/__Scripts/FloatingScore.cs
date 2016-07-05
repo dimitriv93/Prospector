@@ -11,7 +11,7 @@ public enum FSState {
 // FloatingScore can move itself on screen following a Bézier curve
 public class FloatingScore : MonoBehaviour {
 	public FSState         state = FSState.idle;
-	[Serialize Field]
+	[SerializeField]
 	private int            _score = 0; // The score field
 	public string          scoreString;
 	// The score property also sets scoreString when set
@@ -29,7 +29,7 @@ public class FloatingScore : MonoBehaviour {
 	public List<float>     fontSizes; // Bezier points for font scaling
 	public float           timeStart = -1f;
 	public float           timeDuration = 1f;
-	public string          easingCuve = Easing.InOut; // Uses Easing in Utils.cs
+	public string          easingCurve = Easing.InOut; // Uses Easing in Utils.cs
 	// The GameObject that will receive the SendMessage when this is done moving
 	public GameObject      reportFinishTo = null;
 	// Set up the FloatingScore and movement
