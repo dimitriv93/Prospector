@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
 // CBState includes both states for the game and to___ states for movement
 public enum CBState {
 	drawpile,
@@ -13,7 +12,6 @@ public enum CBState {
 	to,
 	idle
 }
-
 // CardBartok extends Card just as CardProspector did.
 public class CardBartok : Card {
 	// These static fields are used to set values that will be the same

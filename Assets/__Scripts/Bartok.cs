@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
-
 public class Bartok : MonoBehaviour {
-	
 	static public Bartok S;
 	public TextAsset deckXML;
 	public TextAsset layoutXML;
